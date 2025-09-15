@@ -1,0 +1,22 @@
+class Solution{
+    public static boolean isPalinArray(int[] arr){
+        for(int num :arr){
+            if(!isPalindrome(num)){
+                return false;
+            }
+        }
+        return true;
+    }
+    private static boolean isPalindrome(int n){
+        String s=String.valueOf(n);
+        int i=0,j=s.length()-1;
+        while(i<j){
+            if(s.charAt(i)!= s.charAt(j)){
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+    }
+}
